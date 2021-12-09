@@ -1,8 +1,40 @@
-// @font-face {
-//     font-family: 'Montserrat';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-display: swap;
-//     src:    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-//             url('../fonts/Montserrat-Bold.woff') format('woff');
-// }
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:    url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+            url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:    url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+            url('../fonts/ProximaNova-Semibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:    url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+            url('../fonts/ProximaNova-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src:    url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+            url('../fonts/ProximaNova-Extrabld.woff') format('woff');
+}
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src:    url('../fonts/ProximaNova-Black.woff2') format('woff2'),
+            url('../fonts/ProximaNova-Black.woff') format('woff');
+}

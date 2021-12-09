@@ -1,0 +1,52 @@
+.home {
+    height: 100vh;
+    padding-top: 180px;
+    @include bg;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        z-index: 1;
+        background-color: rgba(#000, 0.6);
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+    &__inner {
+        position: relative;
+        z-index: 5;
+
+    }
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        color: #fff;
+        max-width: 520px;
+        line-height: 1.1;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    &__text {
+        margin-bottom: 56px;
+        color: #fff;
+    }
+    &__btn {
+        margin-right: 48px;
+    }
+    &__link {
+        color: #fff;
+        text-decoration-line: underline;
+        outline: transparent;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: $green;
+        }
+        &:focus {
+            color: #fff;
+        }
+        &:active {
+            color: #c7c7c7;
+        }
+    }
+}

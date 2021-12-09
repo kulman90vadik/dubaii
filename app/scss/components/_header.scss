@@ -1,0 +1,190 @@
+.header {
+    background-color: $green;
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        margin-right: 60px;
+    }
+    &__select {
+        margin-right: 24px;
+        position: relative;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        outline: transparent;
+        &:hover .header__text {
+            color: #000;
+        }
+        &:hover .header__arrow {
+            stroke: #000;
+        }
+        &:focus .header__text {
+            color: #ccc;
+        }
+        &:focus .header__arrow {
+            stroke: #ccc;
+        }
+    }
+    &__text {
+        color: #fff;
+        display: block;
+        margin-right: 8px;
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+    }
+    &__list {
+        position: absolute;
+        bottom: -115px;
+        right: -11px;
+        background-color: $green;
+        border-radius: 4px;
+        padding: 16px 0;
+        transition: opacity 1.5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transition: opacity 1.5s ease-in-out;
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+    &__arrow {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+        width: 9px;
+        height: 5px;
+        transition: stroke 0.3s ease-in-out, transform 0.3s ease-in-out;
+        &--active {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+    &__option {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        padding: 0 16px;
+        outline: transparent;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__tel {
+        display: flex;
+        padding: 0;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        outline: transparent;
+        background-color: #fff;
+        animation: phone 5.5s linear infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+        &:hover .header__phone{
+            fill: $green;
+        }
+        &:focus .header__phone{
+            fill: #ccc;
+        }
+        &:active .header__phone{
+            fill: #000;
+        }
+    }
+    &__phone {
+        margin: auto;
+        width: 22px;
+        height: 22px;
+        fill:#000;
+        transition: fill 0.3s ease-in-out;
+    }
+}
+
+.logo {
+    display: block;
+    outline: transparent;
+    &__images {
+        width: 85px;
+        height: 40px;
+    }
+}
+
+
+.menu {
+    margin-right: auto;
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+    &__link {
+        color: #fff;
+        outline: transparent;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease-in-out;
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            height: 2px;
+            width: 0%;
+            transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+        &:focus {
+            color: #b8b8b8;
+        }
+        &:active {
+            color: #6e6e6e;
+        }
+        &:active::after {
+            background-color: #6e6e6e;
+        }
+    }
+}
+
+
+
+@keyframes phone {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

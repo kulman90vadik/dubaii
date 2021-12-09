@@ -1,51 +1,36 @@
-$(function(){
-// window.addEventListener("load", function(){
 
-    // $('.header__btn').on('click', function(){
-    //     $('.menu').toggleClass('menu--active');
-    //     $('.header__btn-item').toggleClass('header__btn-item--active');
-    // });
+window.addEventListener("load", function(){
 
-    let headerItems = document.querySelectorAll('.header__btn-item');
-    document.querySelector('.header__btn').addEventListener('click', function(){
-        document.querySelector('.menu').classList.toggle('menu--active');
-        headerItems.forEach(elem => {
-            elem.classList.toggle('header__btn-item--active');
+//  ВЫБОР ЯЗЫКА НА СТРАНИЦЕ    
+    const headerList = document.querySelector('.header__list');
+    const headerBtn = document.querySelector('.header__btn');
+    const headerArrow = document.querySelector('.header__arrow');
+    headerBtn.addEventListener('click', function(){
+        headerList.classList.toggle('header__list--active');
+        headerArrow.classList.toggle('header__arrow--active');
+    });
+
+    document.querySelectorAll('.header__option').forEach(option => {
+        option.addEventListener('click', function(){
+            headerList.classList.toggle('header__list--active');
+            headerBtn.value =  option.value;
+            headerArrow.classList.toggle('header__arrow--active');
+            document.querySelector('.header__text').innerHTML = option.value;
         });
     });
-
-    window.addEventListener('scroll', function(){
-        if(window.scrollY >= 100) {
-            document.querySelector('.header').classList.add('header--active');
-            document.querySelector('.home-page__title').classList.add('home-page__title--outLeft');
-            document.querySelector('.home-page__name').classList.add('home-page__name--outLeft');
-            document.querySelector('.home-page__link').classList.add('home-page__link--outLeft');
-        }
-        else {
-            document.querySelector('.header').classList.remove('header--active');
-            document.querySelector('.home-page__title').classList.remove('home-page__title--outLeft');
-            document.querySelector('.home-page__name').classList.remove('home-page__name--outLeft');
-            document.querySelector('.home-page__link').classList.remove('home-page__link--outLeft');
-        }
+//  МОДАЛЬНОЕ ОКНО
+    const popupContent = document.querySelector('.popup__content');
+    document.querySelector('.home__btn').addEventListener('click', function(){
+        document.querySelector('.popup').classList.toggle('popup--active');
+        popupContent.classList.toggle('popup__content--active');
+    });
+    //  ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
+    document.querySelector('.popup__btn-exit').addEventListener('click', function(){
+        popupContent.classList.toggle('popup__content--active');
+        document.querySelector('.popup').classList.toggle('popup--active');
     });
 
-    const anim = ['html', 'css', 'js', 'sass', 'gulp', 'git', 'jquery', 'figma'];
-    anim.forEach(id =>
-        new Vivus(id, {
-            duration: 300,
-            type: 'delayed'
-        })
-    );
 
-    $('.menu__link, .logo, .home-page__link').on('click', function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href');
-        var top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
 
-        $('.menu').removeClass('menu--active');
-        $('.header__btn-item').removeClass('header__btn-item--active');
-    });
 
-    new WOW().init();
 });

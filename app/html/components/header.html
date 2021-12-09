@@ -1,5 +1,46 @@
 <header class="header">
-    <div class="container container--fluid">
-        gg
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo header__logo" href="#">
+                <img class="logo__images" src="images/logo.svg" alt="Логотип">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Экскурсии</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О нас</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__select">
+                <button class="header__btn" type="button" value="ru">
+                    <span class="header__text">ru</span>
+                    <svg class="header__arrow" aria-label="Выподающий список, выбор языка сайта">
+                        <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                </button>
+                <ul class="header__list">
+                    <li class="header__item">
+                        <button class="header__option" type="button" value="ru">Русский</button>
+                    </li>
+                    <li class="header__item">
+                        <button class="header__option" type="button" value="en">English</button>
+                    </li>
+                </ul>
+            </div>
+            <button class="header__tel" type="button">
+                <svg class="header__phone" aria-label="форма, оставить заявку">
+                    <use xlink:href="images/sprite.svg#phone"></use>
+                </svg>
+            </button>
+        </div>
     </div>
 </header>
