@@ -93,6 +93,334 @@
     </div>
 
 </section>
+        <section class="category">
+    <div class="container">
+        <ul class="category__list">
+            <li class="category__item">
+                <article class="category-card" style="background-image: url(images/category-card-1.jpg);">
+                    <div class="category-card__inner">
+                        <span class="category-card__name">На земле</span>
+                        <a class="category-card__link" href="#">
+                            <svg class="category-card__icon" aria-label="переход на страницу экскурсии по земле">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </li>
+            <li class="category__item">
+                <article class="category-card" style="background-image: url(images/category-card-2.jpg);">
+                    <div class="category-card__inner">
+                        <span class="category-card__name">На воде</span>
+                        <a class="category-card__link" href="#">
+                            <svg class="category-card__icon" aria-label="переход на страницу экскурсии по земле">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </li>
+            <li class="category__item">
+                <article class="category-card" style="background-image: url(images/category-card-3.jpg);">
+                    <div class="category-card__inner">
+                        <span class="category-card__name">В городе</span>
+                        <a class="category-card__link" href="#">
+                            <svg class="category-card__icon" aria-label="переход на страницу экскурсии по земле">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </li>
+            <li class="category__item">
+                <article class="category-card" style="background-image: url(images/category-card-4.jpg);">
+                    <div class="category-card__inner">
+                        <span class="category-card__name">В воздухе</span>
+                        <a class="category-card__link" href="#">
+                            <svg class="category-card__icon" aria-label="переход на страницу экскурсии по земле">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="reservation">
+    <div class="container">
+        <h2 class="title reservation__title">Забронировать экскурсию</h2>
+        <form class="reservation__form" action="#">
+            <ul class="reservation__list">
+                <li class="reservation__item">
+                    <label class="reservation__label" for="date">Выберите дату</label>
+                    <div class="reservation__holder">
+                        <input  class="reservation__input reservation__input--calendar" value="2021-12-12" type="date" name="date" id="date">
+                    </div>
+                </li>
+                <li class="reservation__item">
+                    <label class="reservation__label" for="time">Время</label>
+                    <div class="reservation__holder">
+                        <input  class="reservation__input reservation__input--time" value="18:00" type="time" name="time" id="time">
+                    </div>
+                </li>
+
+                <li class="reservation__item">
+                    <div class="reservation__label" for="time">Вид</div>
+                    <div class="reservation__holder">
+                        <button class="reservation__btn reservation__btn--number" type="button" value="Группа">
+                            <div class="reservation__text">Группа</div>
+                            <svg class="reservation__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                        
+                        <button class="reservation__btn reservation__btn--mann reservation__btn--bottom" type="button" value="1 человек">
+                            <div class="reservation__text">1 человек</div>
+                            <svg class="reservation__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="reservation__item">
+                    <div class="reservation__label" for="time">Выберите эмират</div>
+                    <div class="reservation__holder">
+                        <button class="reservation__btn reservation__btn--select" type="button" value="Дубай">Дубай</button>
+                        <ul class="reservation__select">
+                            <li class="reservation__items">Фуйджера</li>
+                            <li class="reservation__items">Дубай</li>
+                            <li class="reservation__items">Шарджа</li>
+                            <li class="reservation__items">Рас Аль Хайма</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button class="btn reservation__submit" type="submit">Забронировать экскурсию</button>
+        </form>
+    </div>
+</section>
+        <section class="excursion">
+    <div class="container">
+        <h2 class="excursion__title title">Популярные экскурсии</h2>
+        <ul class="excursion__list">
+            <li class="excursion__item excursion__item--one">
+                <a class="excursion__link" href="#">
+                    <div class="excursion__info">
+                        <span class="excursion__name">Аквариум “Дубай Молл”</span>
+                        <p class="excursion__description">Грандиозный аквариум, который попал в книгу рекордов Гиннеса</p>
+                    </div>
+                </a>
+            </li>
+            <li class="excursion__item excursion__item--two">
+                <a class="excursion__link" href="#">
+                    <div class="excursion__info">
+                        <span class="excursion__name">Баб Аль Шамс</span>
+                        <p class="excursion__description">Свидание с самой прекрасной и опасной, вечной и изменчивой, манящей Пустыней</p>
+                    </div>
+                </a>
+            </li>
+            <li class="excursion__item excursion__item--three">
+                <a class="excursion__link" href="#">
+                    <div class="excursion__info">
+                        <span class="excursion__name">Башня Бурдж Халифа</span>
+                        <p class="excursion__description">Одним из главных символов Дубая является самый высокий в мире небоскреб Бурдж Халифа</p>
+                    </div>
+                </a>
+            </li>
+            <li class="excursion__item excursion__item--four">
+                <a class="excursion__link" href="#">
+                    <div class="excursion__info">
+                        <span class="excursion__name">Индийский океан</span>
+                        <p class="excursion__description">прекрасная возможность осмотреть разные пустыни: золотую, красную, черную и даже каменную. Старые горы и предгорья</p>
+                    </div>
+                </a>
+            </li>
+            <li class="excursion__item excursion__item--five">
+                <a class="excursion__link" href="#">
+                    <div class="excursion__info">
+                        <span class="excursion__name">Аквариум “Дубай Молл”</span>
+                        <p class="excursion__description">Это не просто зоопарк — это по сути, образовательный центр и 3 национальных парка на 119 гектарах, с более чем 2500 животными</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="catalogs">
+    <div class="container">
+        <h2 class="catalogs__title title">Все экскурсии</h2>
+        <div class="catalogs__wrapper">
+            <aside class="sidebar">
+                
+                <div class="sidebar__filter">
+                    <button class="sidebar__button" type="button">
+                        <span class="sidebar__text">Эмират</span>
+                        <svg class="sidebar__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>                            
+                    </button>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="city" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Дубай
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="city" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Фуйджера
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="city" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Рас Аль Хайма
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="city" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Шарджа
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="city" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Аджман
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="city" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Ум Аль Кувейн
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__filter">
+                    <button class="sidebar__button" type="button">
+                        <span class="sidebar__text">Количество людей</span>
+                        <svg class="sidebar__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>                            
+                    </button>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="person" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                До 4-х человек
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="person" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Один
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="person" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                Два
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__filter">
+                    <button class="sidebar__button" type="button">
+                        <span class="sidebar__text">Вид</span>
+                        <svg class="sidebar__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>                            
+                    </button>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="look" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                На воде
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="look" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                На земле
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="look" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                В воздухе
+                            </label>
+                        </li>
+                        <li class="sidebar__item">
+                            <label class="sidebar__label">
+                                <input class="sidebar__input" name="look" type="checkbox">
+                                <span class="sidebar__check"></span>
+                                В городе
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+
+            <ul class="catalogs__inner">
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                            <!-- <span class="catalogs-card__tabs catalogs-card__tabs--sale"></span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst"></span> -->
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+           
+            </ul>
+        </div>
+    </div>
+</section>
     </main>    
     <footer class="footer">
     <div class="container">

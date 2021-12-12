@@ -9,14 +9,20 @@
 @import './components/footer';
 @import './home';
 @import './components/popup';
+@import './category';
 
+@import './components/reservation';
+@import './excursion';
+@import './components/catalogs';
+@import './components/catalogs-card';
 
 
 // <svg class="header__icon" aria-label="Вызов по клику на иконку">
 // <use xlink:href="images/sprite.svg#tel"></use>
 // </svg>
 
-
+// @include lineClamp;
+// -webkit-line-clamp: 1;
 
 
 

@@ -1,0 +1,81 @@
+.excursion {
+    margin-bottom: 96px;
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 23px;
+        grid-template-rows: repeat(2, 288px);
+    }
+    &__item {
+        border-radius: 4px;
+        @include bg;
+        grid-column: 3 span;
+        grid-row: 1 span;
+    }
+    &__item--three {
+        grid-row: 2 span;
+        background-image: url(../images/excursion-item-3.jpg);
+    }
+    &__item--one,
+    &__item--five {
+        grid-column: 6 span;
+    }
+    &__item--one {
+        background-image: url(../images/excursion-item-1.jpg);
+    }
+    &__item--two {
+        background-image: url(../images/excursion-item-2.jpg);
+    }
+    &__item--four {
+        background-image: url(../images/excursion-item-4.jpg);
+    }
+    &__item--five {
+        background-image: url(../images/excursion-item-5.jpg);
+        .excursion__description {
+            max-width: 100%;
+        }
+    }
+
+    &__link {
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        outline: transparent;
+        &:hover .excursion__info{
+            padding-bottom: 40px;
+            background-color: rgba(#000, 0.9);
+        }
+        &:active .excursion__info{
+            background-color: rgb#000;
+        }
+        &:focus .excursion__info{
+            background-color: rgba(#000, 0.2);
+        }    
+    }
+    &__info {
+        padding: 16px 32px;
+        background-color: rgba(#000, 0.6);
+        color: #fff;
+        transition: padding-bottom 0.3s ease-in, background-color 0.3s ease-in;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 8px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__description {
+        max-width: 320px;
+        width: 100%;
+        @include lineClamp;
+        -webkit-line-clamp: 4;
+    }
+}

@@ -1,0 +1,54 @@
+<section class="reservation">
+    <div class="container">
+        <h2 class="title reservation__title">Забронировать экскурсию</h2>
+        <form class="reservation__form" action="#">
+            <ul class="reservation__list">
+                <li class="reservation__item">
+                    <label class="reservation__label" for="date">Выберите дату</label>
+                    <div class="reservation__holder">
+                        <input  class="reservation__input reservation__input--calendar" value="2021-12-12" type="date" name="date" id="date">
+                    </div>
+                </li>
+                <li class="reservation__item">
+                    <label class="reservation__label" for="time">Время</label>
+                    <div class="reservation__holder">
+                        <input  class="reservation__input reservation__input--time" value="18:00" type="time" name="time" id="time">
+                    </div>
+                </li>
+
+                <li class="reservation__item">
+                    <div class="reservation__label" for="time">Вид</div>
+                    <div class="reservation__holder">
+                        <button class="reservation__btn reservation__btn--number" type="button" value="Группа">
+                            <div class="reservation__text">Группа</div>
+                            <svg class="reservation__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                        
+                        <button class="reservation__btn reservation__btn--mann reservation__btn--bottom" type="button" value="1 человек">
+                            <div class="reservation__text">1 человек</div>
+                            <svg class="reservation__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="reservation__item">
+                    <div class="reservation__label" for="time">Выберите эмират</div>
+                    <div class="reservation__holder">
+                        <button class="reservation__btn reservation__btn--select" type="button" value="Дубай">Дубай</button>
+                        <ul class="reservation__select">
+                            <li class="reservation__items">Фуйджера</li>
+                            <li class="reservation__items">Дубай</li>
+                            <li class="reservation__items">Шарджа</li>
+                            <li class="reservation__items">Рас Аль Хайма</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button class="btn reservation__submit" type="submit">Забронировать экскурсию</button>
+        </form>
+    </div>
+</section>

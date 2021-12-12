@@ -1,0 +1,147 @@
+.catalogs {
+    margin-bottom: 87px;
+    &__title {
+        margin-bottom: 37px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+
+    }
+    &__items {
+        max-width: 306px;
+        width: 100%;
+    }
+}
+
+
+.sidebar {
+    flex-shrink: 0;
+    max-width: 306px;
+    width: 100%;
+    margin-right: 15px;
+    &__filter {
+        // transition: all 0.4s ease;
+        // height: auto;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        // &--height {
+        //     height: 24px;
+
+        //     transition: all 0.4s ease;
+        // }
+    }
+    &__button {
+        padding: 0;
+        margin-bottom: 18px;
+        border: none;
+        background-color: transparent;
+        outline: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:hover .sidebar__text {
+            color: $green;
+        }
+        &:hover .sidebar__icon {
+            stroke: $green;
+        }
+        &:active .sidebar__text {
+            color: $red
+        }
+        &:active .sidebar__icon {
+            stroke: $red;
+        }
+        &:focus .sidebar__text {
+            color: rgba($green, 0.8);
+        }
+        &:focus .sidebar__icon {
+            stroke: rgba($green, 0.8);
+        }
+    }
+    &__text {
+        margin-right: 14px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        transition: color 0.3s ease-in;
+    }
+    &__icon {
+        width: 12px;
+        height: 6px;
+        stroke-width: 2px;
+        stroke: #000;
+        fill: none;
+        transition: stroke 0.3s ease-in;
+    }
+    &__list {
+        transition: transform 0.3s ease, opacity 0.2s ease;
+        transform-origin: top;
+        opacity: 1;
+        &--active {
+            transform: scaleY(0);
+            opacity: 0;
+            transform-origin: top;
+            transition: transform 0.3s ease,  opacity 0.2s ease;
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    &__label {
+        padding-left: 32px;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $green;
+        }
+        &:active {
+            color: $red;
+        }
+    }
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+        &:checked + .sidebar__check {
+            border-color: $green;
+        }
+        &:checked + .sidebar__check::after {
+            opacity: 1;
+        }
+    }
+    &__check {
+        left: 0;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #71c168;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 11px;
+            height: 8px;
+            background-image: url(../images/icons/check.svg);
+            @include bg;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
+}

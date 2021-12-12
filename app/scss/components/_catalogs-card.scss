@@ -1,0 +1,131 @@
+.catalogs-card {
+    border-radius: 8px;
+    &__photo {
+        position: relative;
+        display: flex;
+        height: 165px;
+        max-width: 306px;
+        width: 100%;
+    }
+    &__image {
+        object-fit: cover;
+        max-width: 100%;
+    }
+    &__tabs {
+        position: absolute;
+        left: 23px;
+        bottom: -11px;
+        padding: 2px 8px;
+        font-size: 14px;
+        color: #fff;
+        background-color: $green;
+        border-radius: 8px;
+        &--day {
+
+        }
+    }
+    &__info {
+        padding: 16px 24px;
+        background-color: #effbef;
+    }
+    &__time {
+        display: flex;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    &__person,
+    &__hour {
+        position: relative;
+        padding-left: 21px;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            width: 15px;
+            height: 15px;
+            @include bg;
+        }
+    }
+    &__hour {
+        margin-right: 12px;
+        &::after {
+            background-image: url(../images/clock.svg);
+        }
+    }
+    &__person {
+        &::after {
+            background-image: url(../images/users.svg);
+        }
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 17px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        p {
+
+        }
+    }
+    &__text--more {
+        display: none;
+    }
+    &__add {
+        color: $green;
+        margin-left: auto;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        span {
+            margin-right: 6px;
+            display: block;
+            border-bottom: 1px solid $green;
+        }
+        &:hover {
+
+        }
+    }
+    &__icon {
+        fill: none;
+        stroke-width: 2px;
+        stroke: $green;
+        width: 13px;
+        height: 7px;
+        transition: transform 0.3s ease-in;
+        &--active {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in;
+        }
+    }
+    &__price {
+        display: flex;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    &__price-number {
+        margin: 0 4px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        padding: 10px 21px;
+        border-radius: 8px;
+    }
+    &__link {
+        display: inline;
+        font-size: 16px;
+        color: $green;
+        border-bottom: 1px solid $green;
+    }
+}
