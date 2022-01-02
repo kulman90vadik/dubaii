@@ -26,16 +26,9 @@
     width: 100%;
     margin-right: 15px;
     &__filter {
-        // transition: all 0.4s ease;
-        // height: auto;
         &:not(:last-child) {
             margin-bottom: 30px;
         }
-        // &--height {
-        //     height: 24px;
-
-        //     transition: all 0.4s ease;
-        // }
     }
     &__button {
         padding: 0;
@@ -45,6 +38,7 @@
         outline: transparent;
         cursor: pointer;
         display: flex;
+        transition: 0.3s ease;
         align-items: center;
         &:hover .sidebar__text {
             color: $green;
@@ -64,6 +58,12 @@
         &:focus .sidebar__icon {
             stroke: rgba($green, 0.8);
         }
+        &--active {
+            & .sidebar__icon {
+                transition: transform 0.3s ease;
+                transform: rotate(180deg);
+            }
+        }
     }
     &__text {
         margin-right: 14px;
@@ -78,18 +78,13 @@
         stroke-width: 2px;
         stroke: #000;
         fill: none;
-        transition: stroke 0.3s ease-in;
+        transition: stroke 0.3s ease-in, transform 0.3s ease;
     }
     &__list {
-        transition: transform 0.3s ease, opacity 0.2s ease;
-        transform-origin: top;
-        opacity: 1;
-        &--active {
-            transform: scaleY(0);
-            opacity: 0;
-            transform-origin: top;
-            transition: transform 0.3s ease,  opacity 0.2s ease;
-        }
+        transition: transform 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
     }
     &__item {
         &:not(:last-child) {

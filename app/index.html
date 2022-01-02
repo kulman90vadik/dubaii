@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai</title>
     <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body id="body">
@@ -56,12 +57,12 @@
     </div>
 </header>
     <main class="main">
-        <section class="home" style="background-image: url(images/home-bg.jpg);">
+        <section class="home popup-modal" style="background-image: url(images/home-bg.jpg);">
     <div class="container">
         <div class="home__inner">
             <h1 class="home__title">Экскурсии без посредников</h1>
             <p class="home__text">Лучшие в своем деле в деле своем</p>
-            <button class="btn home__btn" type="button">Записаться на экскурсию</button>
+            <button class="btn home__btn popup-btn" type="button">Записаться на экскурсию</button>
             <a class="home__link" href="#">Посмотреть все экскурсии</a>
         </div>
     </div>
@@ -72,16 +73,19 @@
                 <form class="popup__form" action="#">
                     <h3 class="popup__title">Оставить заявку</h3>
                     <p class="popup__descr">Мы перезвоним вам в ближайшее время</p>
-                    <label class="visually-hidden" for="name">Поле для ввода Вашего имя</label>
-                    <input class="popup__input" type="text" id="name" name="name" placeholder="Имя">
-                    <label class="visually-hidden" for="tel">Поле для ввода Вашего телефона</label>
-                    <input class="popup__input" type="tel" id="tel" name="tel" placeholder="Телефон">
+                    <label class="visually-hidden">Поле для ввода Вашего имя</label>
+
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                    <label class="visually-hidden">Поле для ввода Вашего телефона</label>
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
                     <button class="btn popup__btn" type="submit">Отправить</button>
                     <label class="popup__label">
-                        <input class="popup__checkbox" type="checkbox" name="check">
+                        <input class="checkbox" type="checkbox" name="check">
                         <span class="popup__check"></span>
                         <p class="popup__text">Я согласен на обработку персональных данных</p>
                     </label>
+
+
                 </form>
                 <button class="popup__btn-exit" type="button" aria-label="Закрытие модального окна">
                     <svg class="popup__exit">
@@ -166,7 +170,7 @@
                 </li>
 
                 <li class="reservation__item">
-                    <div class="reservation__label" for="time">Вид</div>
+                    <div class="reservation__label">Вид</div>
                     <div class="reservation__holder">
                         <button class="reservation__btn reservation__btn--number" type="button" value="Группа">
                             <div class="reservation__text">Группа</div>
@@ -185,7 +189,7 @@
                 </li>
 
                 <li class="reservation__item">
-                    <div class="reservation__label" for="time">Выберите эмират</div>
+                    <div class="reservation__label">Выберите эмират</div>
                     <div class="reservation__holder">
                         <button class="reservation__btn reservation__btn--select" type="button" value="Дубай">Дубай</button>
                         <ul class="reservation__select">
@@ -255,13 +259,13 @@
             <aside class="sidebar">
                 
                 <div class="sidebar__filter">
-                    <button class="sidebar__button" type="button">
+                    <button class="sidebar__button sidebar__button--active" type="button">
                         <span class="sidebar__text">Эмират</span>
                         <svg class="sidebar__icon">
                             <use xlink:href="images/sprite.svg#arrow-down"></use>
                         </svg>                            
                     </button>
-                    <ul class="sidebar__list">
+                    <ul class="sidebar__list" style="max-height: 224px;">
                         <li class="sidebar__item">
                             <label class="sidebar__label">
                                 <input class="sidebar__input" name="city" type="checkbox">
@@ -416,17 +420,845 @@
                         </div>
                     </article>
                 </li>
-           
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-2.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Пт-Сб</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst">Свидание</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Ужин на арабской лодке</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new catalogs-card__price-new--red">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Свидание</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-3.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Сб-Вс</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--purple">Семейный</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Полёт на воздушном шаре</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-4.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Пт-Сб</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>15-25</span>мин</div>
+                                <div class="catalogs-card__person">2-6</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Полёт на вертолёте</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new catalogs-card__price-new--red">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-5.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                            <!-- <span class="catalogs-card__tabs catalogs-card__tabs--sale"></span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst"></span> -->
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">3-5</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Тематический парк MotionGate</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">120</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-6.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">3-5</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Тематический парк MotionGate</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">125</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                            <!-- <span class="catalogs-card__tabs catalogs-card__tabs--sale"></span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst"></span> -->
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-2.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Пт-Сб</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst">Свидание</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Ужин на арабской лодке</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new catalogs-card__price-new--red">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Свидание</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-3.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Сб-Вс</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--purple">Семейный</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Полёт на воздушном шаре</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
             </ul>
+        </div>
+    </div>
+</section>
+        <section class="reviews popup-modal">
+    <div class="container">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__slider">
+            <ul class="reviews__wrapper">
+                <li class="reviews__slide">
+                    <img class="reviews__image" src="images/rewiew-1.png" alt="Антон">
+                    <span class="reviews__name">Анастасия</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-55">
+                            <label class="rating__label" for="rating-55"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-44" >
+                            <label class="rating__label" for="rating-44"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-33">
+                            <label class="rating__label" for="rating-33"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-22" checked>
+                            <label class="rating__label" for="rating-22"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-11">
+                            <label class="rating__label" for="rating-11"></label>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <p>
+                            Спасибо за прекрасную организацию экскурсии! Отлично поужинали на лодке в Дубай Марине! Очень удобно, что был трансфер от отеля и обратно, посмотрели на ночной Дубай, водитель- супер!thumbsup
+                        </p>
+                    </div>
+                </li>
+                <li class="reviews__slide">
+                    <img class="reviews__image" src="images/rewiew-2.png" alt="Антон">
+                    <span class="reviews__name">Лера</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-555">
+                            <label class="rating__label" for="rating-555"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-444" checked>
+                            <label class="rating__label" for="rating-444"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-333">
+                            <label class="rating__label" for="rating-333"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-222">
+                            <label class="rating__label" for="rating-222"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-111">
+                            <label class="rating__label" for="rating-111"></label>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <p>
+                            Спасибо за прекрасную организацию экскурсии! Отлично поужинали на лодке в Дубай Марине! Очень удобно, что был трансфер от отеля и обратно, посмотрели на ночной Дубай, водитель- супер!thumbsup
+                        </p>
+                    </div>
+                </li>
+                <li class="reviews__slide">
+                    <img class="reviews__image" src="images/rewiew-3.png" alt="Антон">
+                    <span class="reviews__name">Лера</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-5555">
+                            <label class="rating__label" for="rating-5555"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-4444" checked>
+                            <label class="rating__label" for="rating-4444"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-3333">
+                            <label class="rating__label" for="rating-3333"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-2222">
+                            <label class="rating__label" for="rating-2222"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-1111">
+                            <label class="rating__label" for="rating-1111"></label>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <p>
+                            Спасибо за прекрасную организацию экскурсии! Отлично поужинали на лодке в Дубай Марине! Очень удобно, что был трансфер от отеля и обратно, посмотрели на ночной Дубай, водитель- супер!thumbsup
+                        </p>
+                    </div>
+                </li>
+                <li class="reviews__slide">
+                    <img class="reviews__image" src="images/rewiew-3.png" alt="Гриша">
+                    <span class="reviews__name">Гриша</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-5-5">
+                            <label class="rating__label" for="rating-5-5"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-4-4" checked>
+                            <label class="rating__label" for="rating-4-4"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-3-3">
+                            <label class="rating__label" for="rating-3-3"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-2-2">
+                            <label class="rating__label" for="rating-2-2"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-1-1">
+                            <label class="rating__label" for="rating-1-1"></label>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <p>
+                            Спасибо за прекрасную организацию экскурсии! Отлично поужинали на лодке в Дубай Марине! Очень удобно, что был трансфер от отеля и обратно, посмотрели на ночной Дубай, водитель- супер!thumbsup
+                        </p>
+                    </div>
+                </li>
+                <li class="reviews__slide">
+                    <img class="reviews__image" src="images/rewiew-1.png" alt="Антон">
+                    <span class="reviews__name">Лера</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-5+">
+                            <label class="rating__label" for="rating-5+"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-4+" checked>
+                            <label class="rating__label" for="rating-4+"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-3+">
+                            <label class="rating__label" for="rating-3+"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-2+">
+                            <label class="rating__label" for="rating-2+"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-1+">
+                            <label class="rating__label" for="rating-1+"></label>
+                        </div>
+                    </div>
+
+                    <div class="reviews__text">
+                        <p>
+                            Спасибо за прекрасную организацию экскурсии! Отлично поужинали на лодке в Дубай Марине! Очень удобно, что был трансфер от отеля и обратно, посмотрели на ночной Дубай, водитель- супер!
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="reviews__callback">
+            <div class="reviews__descr">Уже пользовались нашими услугами? 
+                </div>
+            <button class="reviews__button popup-btn" type="button">Оставьте отзыв</button>
+        </div>
+    </div>
+
+
+    <div class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <form class="popup__form" action="#">
+                    <h3 class="popup__title">Оставить отзыв</h3>
+                    <p class="popup__descr">Расскажите что вам понравилось, а что нам стоит улучшить.</p>
+                    <label class="visually-hidden">Поле для ввода Вашего имя</label>
+
+
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                    <label class="visually-hidden">Поле для ввода Вашего телефона</label>
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
+                    <label class="visually-hidden">Поле для ввода Вашего отзыва</label>
+                    <textarea class="input textarea" name="text" placeholder="Отзыв"></textarea>
+
+                    <div class="popup__file">
+                        Ваша фотография
+                        <img class="popup__image" src="#">
+                        <label class="popup__label-file">
+                            <input class="popup__input-file" type="file" name="file">
+                            Загрузить
+                        </label>
+                    </div>
+
+                    <div class="popup__rating">
+                        <span class="popup__description">Ваша оценка</span>
+                        <div class="rating">
+                            <div class="rating__item">
+                                <input class="rating__input" type="radio" value="5" name="rating" id="rating-5">
+                                <label class="rating__label" for="rating-5"></label>
+                                <input class="rating__input" type="radio" value="4" name="rating" id="rating-4" checked>
+                                <label class="rating__label" for="rating-4"></label>
+                                <input class="rating__input" type="radio" value="3" name="rating" id="rating-3">
+                                <label class="rating__label" for="rating-3"></label>
+                                <input class="rating__input" type="radio" value="2" name="rating" id="rating-2">
+                                <label class="rating__label" for="rating-2"></label>
+                                <input class="rating__input" type="radio" value="1" name="rating" id="rating-1">
+                                <label class="rating__label" for="rating-1"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn popup__btn" type="submit">Отправить</button>
+                    <label class="popup__label popup__label--reviews">
+                        <input class="checkbox" type="checkbox" name="check">
+                        <span class="popup__check"></span>
+                        <p class="popup__text">Я согласен на обработку персональных данных</p>
+                    </label>
+                </form>
+                <button class="popup__btn-exit" type="button" aria-label="Закрытие модального окна">
+                    <svg class="popup__exit">
+                        <use xlink:href="images/sprite.svg#exit"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+        <section class="questions">
+    <div class="container">
+        <h2 class="title questions__title">Часто задаваемые вопросы</h2>
+        <ul class="questions__inner">
+            <li class="questions__item" style="margin-left: 13px;">
+                <button class="questions__btn questions__btn--active" type="button" style="margin-left: -13px;">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text" style="max-height: 177px;">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="contact">
+    <div class="container">
+        <h2 class="title contact__title">Остались вопросы?</h2>
+        <div class="contact__inner">
+            <div class="contact__content">
+                <div class="contact__text">
+                    <p>
+                        Оставьте заявку и мы проконсультируем вас и ответим на все вопросы
+                    </p>
+                    <p>
+                        Вы так же можете связаться с нами удобным для вас способом
+                    </p>
+                </div>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#contact-phone"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#post"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="contact__form" action="#">
+                <label class="visually-hidden" for="name">Поле для ввода Вашего имя</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Имя">
+                <label class="visually-hidden" for="tel">Поле для ввода Вашего телефона</label>
+                <input class="input" type="tel" i
+                d="tel" name="tel" placeholder="Телефон">
+                <label class="visually-hidden">Поле для ввода Вашего отзыва</label>
+                <textarea class="input textarea" name="text" placeholder="Отзыв"></textarea>
+                <button class="btn contact__btn" type="submit">Отправить</button>
+                <label class="popup__label">
+                    <input class="checkbox" type="checkbox" name="check">
+                    <span class="contact__check"></span>
+                    <p class="contact__text-contact">Я согласен на обработку персональных данных</p>
+                </label>
+
+            </form>
         </div>
     </div>
 </section>
     </main>    
     <footer class="footer">
     <div class="container">
-      
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__top">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__images" src="images/logo.svg" alt="Логотип">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">Главная</a>
+                            </li>
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">Экскурсии</a>
+                            </li>
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">Контакты</a>
+                            </li>
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">О нас</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__text">
+                    <p>
+                        Приятно, граждане, наблюдать, как сторонники тоталитаризма в науке, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали.
+                    </p>
+                </div>
+            </div>
+            <div class="footer__right">
+                <ul class="social footer__social">
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#contact-phone"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#post"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <a class="footer__tel" href="tel:+79999999999">
+                    +7 999 999 99 99
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copy">
+        <div class="container">
+            <div class="footer__copy-inner">
+                <a class="footer__link footer__link--politic" href="#">
+                    Политика конфиденциальности
+                </a>
+                <a class="footer__link footer__link--conditions" href="#">
+                    Условия использования
+                </a>
+                <a class="footer__link footer__link--email" href="mailto:tngroup@2021">
+                    tngroup@2021
+                </a>
+            </div>
+        </div>
     </div>
 </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+.reviews {
+    margin-bottom: 111px;
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__slider {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 70px;
+        margin-bottom: 45px;
+        & .rating {
+            &__input {
+                &:checked {
+                    color: #fffb00;
+                }
+                &:checked ~ .rating__label {
+                    color: #ccc;
+                }
+            }
+            &__label {
+                cursor: text;
+                &:hover,
+                &:hover ~ .rating__label {
+                    color: #ccc;
+                }
+                &:checked ~ .rating__label:hover {
+                    color: #fffb00;
+                }
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+        width: 100%;
+    }
+    &__slide {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__image {
+        border-radius: 50%;
+        margin-bottom: 17px;
+        width: 96px;
+        height: 96px;
+    }
+    &__name {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    // &__list {
+    //     display: flex;
+    //     margin-bottom: 20px;
+    // }
+    // &__item {
+    //     @include bg;
+    //     background-image: url(../images/star.svg);
+    //     width: 24px;
+    //     height: 24px;
+    //     &:not(:last-child) {
+    //         margin-right: 10px;
+    //     }
+    // }
+    &__text {
+        p {
+            text-align: center;
+            @include lineClamp;
+            -webkit-line-clamp: 7;
+        }
+    }
+    & .swiper-pagination {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & .swiper-pagination-bullet {
+            margin: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba($green, 0.6);
+            transition: background-color 0.3s ease-in;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+        & .swiper-pagination-bullet-active {
+            background-color: $green;
+            transition: background-color 0.3s ease-in;
+        }
+    }
+
+
+    &__callback {
+        position: relative;
+        font-size: 24px;
+        padding: 5px 0 5px 110px;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 86px;
+            height: 86px;
+            @include bg;
+            background-image: url(../images/boys.png);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__descr {
+        margin-bottom: 10px;
+    }
+    &__button {
+        cursor: pointer;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        outline: transparent;
+        color: $green;
+        border-bottom: 1px solid $green;
+        transition: color 0.3s ease-in, border-color 0.3s ease-in;
+        &:hover {
+            color: #000;
+            border-color: #000;
+        }
+        &:active {
+            color: #303030;
+            border-color: #303030;
+        }
+        &:focus {
+            color: $red;
+            border-color: $red;
+        }
+    }
+}

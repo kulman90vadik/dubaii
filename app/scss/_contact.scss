@@ -1,61 +1,52 @@
-.popup {
-    position: fixed;
-    overflow-y: auto;
-    overflow-x: hidden;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#000, 0.8);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: all 1s ease-in-out;
-    &--active {
-        opacity: 1;
-        transition: opacity 0.4s ease-in-out;
-        visibility: visible;
-        pointer-events: auto;
-    }
-    &__wrapper {
+.contact {
+    padding-bottom: 184px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto;
+    background-image: url(../images/contact-bg.svg);
+    &__inner {
         display: flex;
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        position: relative;
     }
     &__content {
-        position: relative;
-        background-color: #fff;
-        max-width: 526px;
+        max-width: 415px;
+        margin-right: 160px;
         width: 100%;
-        padding: 40px 55px;
-        transform: perspective(600px) translate(0px, -200%) rotate(45deg);
-        transition: transform 0.3s ease-in-out;
-        &--active {
-            transform: perspective(600px) translate(0px, 0%) rotate(0deg);
-            transition: transform 0.3s ease-in-out;
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+        &::after {
+            width: 128px;
+            height: 2px;
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            background-color: $green;
+        }
+    }
+    &__text {
+        margin-bottom: 32px;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 3;
+            &:nth-of-type(1) {
+                margin-bottom: 32px;
+                color: $grey;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 32px;
+
+            }
         }
     }
     &__form {
+        max-width: 415px;
         width: 100%;
-        text-align: center;
     }
-    &__title {
-        margin-bottom: 8px;
-        font-weight: 600;
-        font-size: 36px;
-        @include lineClamp;
-        -webkit-line-clamp: 1;
-    }
-    &__descr {
-        margin-bottom: 32px;
-        font-size: 16px;
-        @include lineClamp;
-        -webkit-line-clamp: 2;
-    }
+    
+
     & .input {
         display: block;
         width: 100%;
@@ -124,15 +115,6 @@
         position: absolute;
     }
 
-    &__image {
-        position: absolute;
-        right: 125px;
-        width: 60px;
-        height: 100%;
-        top: 0;
-        display: flex;
-        object-fit: cover;
-    }
 
     &__btn {
         width: 100%;
@@ -147,33 +129,8 @@
             background-color: rgba($green, 0.7);
         }
     }
-    &__btn-exit {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 0;
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        outline: transparent;
-        &:hover .popup__exit {
-            stroke: red;
-        }
-        &:focus .popup__exit {
-            stroke: $green;
-        }
-        &:active .popup__exit {
-            stroke: #ccc;
-        }
-    }
-    &__exit {
-        width: 24px;
-        height: 24px;
-        fill: none;
-        stroke: #000;
-        stroke-width: 2px;
-        transition: stroke 0.3s ease-in-out;
-    }
+
+
     &__label {
         position: relative;
         display: block;
@@ -182,29 +139,30 @@
         padding-left: 40px;
         font-size: 16px;
         cursor: pointer;
-        &:hover .popup__text {
+        &:hover .contact__text-contact {
             color: $green;
         }
-        &:active .popup__text {
+        &:active .contact__text-contact {
             color: #000;
         }
         &--reviews {
             width: 100%;
         }
     }
-    &__text {
+    &__text-contact {
         transition: color .3s ease-in-out;
     }
+
     & .checkbox {
         width: 1px;
         height: 1px;
         overflow: hidden;
         clip: rect(0 0 0 0);
         position: absolute;
-        &:checked + .popup__check {
+        &:checked + .contact__check {
             border-color: #000;
         }
-        &:checked + .popup__check::after {
+        &:checked + .contact__check::after {
             opacity: 1;
         }
     }
@@ -232,26 +190,4 @@
             transition: opacity 0.3s ease-in-out;
         }
     }
-
-
-    &__rating {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 32px;
-    }
-    &__description {
-        font-weight: 600;
-    }
 }
-
-
-
-
-
-
-
-
-
-
-

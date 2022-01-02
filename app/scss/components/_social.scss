@@ -1,0 +1,37 @@
+.social {
+    display: flex;
+    align-items: center;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+    &__link {
+        outline: transparent;
+        &:hover .social__icon {
+            fill: $green;
+        }
+        &:active .social__icon {
+            fill: $gold-lite;
+        }
+        &:focus .social__icon {
+            fill: $grey;
+        }
+    }
+    &__icon {
+        width: 32px;
+        height: 32px;
+        fill: #000;
+        transition: fill 0.3s ease;
+    }
+    &__link--footer {
+        & .social__icon {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+        &:hover .social__icon {
+            fill: $gold-lite;
+        }
+    }
+}

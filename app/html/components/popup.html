@@ -1,0 +1,25 @@
+<div class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <form class="popup__form" action="#">
+                <h3 class="popup__title">Оставить заявку</h3>
+                <p class="popup__descr">Мы перезвоним вам в ближайшее время</p>
+                <label class="visually-hidden" for="name">Поле для ввода Вашего имя</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Имя">
+                <label class="visually-hidden" for="tel">Поле для ввода Вашего телефона</label>
+                <input class="input" type="tel" id="tel" name="tel" placeholder="Телефон">
+                <button class="btn popup__btn" type="submit">Отправить</button>
+                <label class="popup__label">
+                    <input class="checkbox" type="checkbox" name="check">
+                    <span class="popup__check"></span>
+                    <p class="popup__text">Я согласен на обработку персональных данных</p>
+                </label>
+            </form>
+            <button class="popup__btn-exit" type="button" aria-label="Закрытие модального окна">
+                <svg class="popup__exit">
+                    <use xlink:href="images/sprite.svg#exit"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,9 @@
-<section class="home" style="background-image: url(images/home-bg.jpg);">
+<section class="home popup-modal" style="background-image: url(images/home-bg.jpg);">
     <div class="container">
         <div class="home__inner">
             <h1 class="home__title">Экскурсии без посредников</h1>
             <p class="home__text">Лучшие в своем деле в деле своем</p>
-            <button class="btn home__btn" type="button">Записаться на экскурсию</button>
+            <button class="btn home__btn popup-btn" type="button">Записаться на экскурсию</button>
             <a class="home__link" href="#">Посмотреть все экскурсии</a>
         </div>
     </div>
@@ -14,16 +14,19 @@
                 <form class="popup__form" action="#">
                     <h3 class="popup__title">Оставить заявку</h3>
                     <p class="popup__descr">Мы перезвоним вам в ближайшее время</p>
-                    <label class="visually-hidden" for="name">Поле для ввода Вашего имя</label>
-                    <input class="popup__input" type="text" id="name" name="name" placeholder="Имя">
-                    <label class="visually-hidden" for="tel">Поле для ввода Вашего телефона</label>
-                    <input class="popup__input" type="tel" id="tel" name="tel" placeholder="Телефон">
+                    <label class="visually-hidden">Поле для ввода Вашего имя</label>
+
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                    <label class="visually-hidden">Поле для ввода Вашего телефона</label>
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
                     <button class="btn popup__btn" type="submit">Отправить</button>
                     <label class="popup__label">
-                        <input class="popup__checkbox" type="checkbox" name="check">
+                        <input class="checkbox" type="checkbox" name="check">
                         <span class="popup__check"></span>
                         <p class="popup__text">Я согласен на обработку персональных данных</p>
                     </label>
+
+
                 </form>
                 <button class="popup__btn-exit" type="button" aria-label="Закрытие модального окна">
                     <svg class="popup__exit">

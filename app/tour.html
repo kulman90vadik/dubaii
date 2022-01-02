@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экскурсия</title>
+    <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body">
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo header__logo" href="#">
+                <img class="logo__images" src="images/logo.svg" alt="Логотип">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Экскурсии</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О нас</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__select">
+                <button class="header__btn" type="button" value="ru">
+                    <span class="header__text">ru</span>
+                    <svg class="header__arrow" aria-label="Выподающий список, выбор языка сайта">
+                        <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                </button>
+                <ul class="header__list">
+                    <li class="header__item">
+                        <button class="header__option" type="button" value="ru">Русский</button>
+                    </li>
+                    <li class="header__item">
+                        <button class="header__option" type="button" value="en">English</button>
+                    </li>
+                </ul>
+            </div>
+            <button class="header__tel" type="button">
+                <svg class="header__phone" aria-label="форма, оставить заявку">
+                    <use xlink:href="images/sprite.svg#phone"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <section class="home-helicopter popup-modal" style="background-image: url(images/home-helicopter-bg.jpg);">
+    <div class="container">
+        <div class="home-helicopter__inner">
+            <h1 class="home-helicopter__title">Полет на вертолете</h1>
+            <div class="home-helicopter__content">
+                <div class="home-helicopter__text">
+                    <p>
+                        Сложно сказать, почему активно развивающиеся страны третьего мира призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений. 
+                    </p>
+                </div>
+                <ul class="home-helicopter__list">
+                    <li class="home-helicopter__item">
+                        12 - 25 минут над знаковыми зданиями
+                    </li>
+                    <li class="home-helicopter__item">
+                        Преимущество
+                    </li>
+                    <li class="home-helicopter__item">
+                        До 6-ти человек
+                    </li>
+                </ul>
+                <div class="home-helicopter__holder">
+                    <button class="home-helicopter__btn btn popup-btn" type="button">Записаться на экскурсию</button>
+                    <div class="home-helicopter__price">127<span>$</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <form class="popup__form" action="#">
+                    <h3 class="popup__title">Оставить заявку</h3>
+                    <p class="popup__descr">Мы перезвоним вам в ближайшее время</p>
+                    <label class="visually-hidden">Поле для ввода Вашего имя</label>
+
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                    <label class="visually-hidden">Поле для ввода Вашего телефона</label>
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
+                    <button class="btn popup__btn" type="submit">Отправить</button>
+                    <label class="popup__label">
+                        <input class="checkbox" type="checkbox" name="check">
+                        <span class="popup__check"></span>
+                        <p class="popup__text">Я согласен на обработку персональных данных</p>
+                    </label>
+
+
+                </form>
+                <button class="popup__btn-exit" type="button" aria-label="Закрытие модального окна">
+                    <svg class="popup__exit">
+                        <use xlink:href="images/sprite.svg#exit"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+        <section class="reservation-helicopter">
+    <div class="container">
+        <h2 class="title reservation-helicopter__title">Быстрое бронирование</h2>
+        <form class="reservation-helicopter__form" action="#">
+            <ul class="reservation-helicopter__list">
+                <li class="reservation-helicopter__item">
+                    <label class="reservation-helicopter__label" for="date">Выберите дату</label>
+                    <div class="reservation-helicopter__holder">
+                        <input  class="reservation-helicopter__input reservation-helicopter__input--calendar" value="2021-12-12" type="date" name="date" id="date">
+                    </div>
+                </li>
+                <li class="reservation-helicopter__item">
+                    <label class="reservation-helicopter__label" for="time">Время</label>
+                    <div class="reservation-helicopter__holder">
+                        <input  class="reservation-helicopter__input reservation-helicopter__input--time" value="18:00" type="time" name="time" id="time">
+                    </div>
+                </li>
+    
+                <li class="reservation-helicopter__item">
+                    <div class="reservation-helicopter__label" for="time">Вид</div>
+                    <div class="reservation-helicopter__holder">
+                        <button class="reservation-helicopter__btn reservation-helicopter__btn--number" type="button" value="Группа">
+                            <div class="reservation-helicopter__text">Группа</div>
+                            <svg class="reservation-helicopter__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                        
+                        <button class="reservation-helicopter__btn reservation-helicopter__btn--mann reservation-helicopter__btn--bottom" type="button" value="1 человек">
+                            <div class="reservation-helicopter__text">1 человек</div>
+                            <svg class="reservation-helicopter__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="reservation-helicopter__item">
+                    <div class="reservation-helicopter__label">Длительность полета</div>
+                    <div class="reservation-helicopter__time-holder">
+
+                        <button class="reservation-helicopter__time-btn" type="button" value="15 минут">
+                            <span class="reservation-helicopter__time-value">15 минут</span>
+                            <svg class="reservation-helicopter__time-icon">
+                                <use xlink:href="images/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="reservation-helicopter__time-list">
+                            <li class="reservation-helicopter__time-item">15 минут</li>
+                            <li class="reservation-helicopter__time-item">20 минут</li>
+                            <li class="reservation-helicopter__time-item">25 минут</li>
+                            <li class="reservation-helicopter__time-item">30 минут</li>
+                            <li class="reservation-helicopter__time-item">45 минут</li>
+                        </ul>
+                    </div>
+                </li> 
+
+                <li class="reservation-helicopter__item">
+                    <div class="reservation-helicopter__label">Кол-во персон</div>
+                    <div class="reservation-helicopter__box">
+                        <div class="reservation-helicopter__counter">
+                            <button class="reservation-helicopter__plus" type="button" data-action ="plus">+</button>
+                            <div class="reservation-helicopter__number">1</div>
+                            <button class="reservation-helicopter__minus" type="button" data-action ="minus">-</button>
+                        </div>
+                        <div class="reservation-helicopter__price">
+                            333
+                            <span>$</span>
+                        </div>
+                    </div>
+                </li>    
+                
+                <li class="reservation-helicopter__item reservation-helicopter__item--submit">
+                    <button class="btn reservation-helicopter__submit" type="submit">Забронировать экскурсию</button>
+                </li>
+
+            </ul>
+        </form>
+    </div>
+</section>
+
+
+        <section class="feature">
+    <div class="container">
+        <h2 class="feature__title title">Особенности</h2>
+        <ul class="feature__list">
+            <li class="feature__item">
+                На групповой основе ожидание трансфера от назначенного времени может занять до 30 минут. 
+                На индивидуальной основе трансфер подаётся четко в назначенное время.
+                Ожидать водителя нужно в фойе.
+            </li>
+            <li class="feature__item">
+                Значимость этих проблем настолько очевидна, что базовый вектор развития в значительной степени обусловливает важность экономической целесообразности принимаемых решений.
+            </li>
+        </ul>
+        <div class="feature__inner">
+            <div class="feature__text">
+                <p>
+                    Предлагаем вам самую увлекательную и востребованную Экскурсию — Полет на вертолете.
+                    Вы пролетите как птица над новым и старым Дубаем, над каналами, небоскребами, шикарными мечетями и удивитесь тому, как дальновидные Правители Эмиратов развивают не только нефтяную промышленность, но и другие богатства аравийского побережья, среди них — береговая линия протяженностью 1300 км, превращенная в бесконечный, чистейший белоснежный пляж, привлекающий туристов круглый год и другие многочисленные достопримечательности города. Всё это вы сможете увидеть с высоты птичьего полёта.
+                    
+                </p>
+            </div>
+            <a class="feature__popup" href="" style="background-image: url(images/feature-popup.jpg);">
+                <button class="feature__btn" type="button" aria-label="play">
+                    <svg class="feature__icon">
+                        <use xlink:href="images/sprite.svg#play"></use>
+                    </svg>
+                </button>
+            </a>
+        </div>
+
+        <h2 class="feature__title title">Как проходит экскурсия:</h2>
+        <ul class="feature__stages">
+            <li class="feature__stage">
+                <span class="feature__name">Сбор из отеля</span>
+                На групповой основе ожидание трансфера от назначенного времени может занять до 30 минут. 
+                На индивидуальной основе трансфер подаётся четко в назначенное время.
+                Ожидать водителя нужно в фойе отеля, так, чтобы Вас было легко найти.
+            </li>
+            <li class="feature__stage">
+                <span class="feature__name">Трансфер к вертолётной площадке</span>
+                Водитель отвезёт вас к вертолётной площадке. Время в пути зависит от удалённости вашего отеля от места взлёта и плотности движения на дорогах.
+            </li>
+            <li class="feature__stage">
+                <span class="feature__name">Регистрация</span>
+                По прибытии нужно пройти регистрацию на полёт, для этого нужно предъявить оригинал паспорта и пройти взвешивание
+            </li>
+            <li class="feature__stage">
+                <span class="feature__name">Инструктаж</span>
+                Перед полётом вы прослушаете инструктаж по безопасности на русском языке. 
+            </li>
+            <li class="feature__stage">
+                <span class="feature__name">Полёт на вертолёте</span>
+                Взмыть вверх, как птица над Дубаем на борту вертолёта- мечта, которая сбудется сегодня! Вы пролетите над главными достопримечательностями мегаполиса и сделать фото с нового ракурса.
+            </li>
+            <li class="feature__stage">
+                <span class="feature__name">Обратный трансфер</span>
+                После полёта на парковке вас будет ожидать водитель. Он отвезёт вас в отель. Время в пути зависит от удалённости вашего отеля от вертолётной площадки и плотности трафика на дорогах. 
+            </li>
+        </ul>
+
+        <ul class="feature__time-list">
+            <li class="feature__time-item">
+                <span class="feature__time-name">12 минут</span>
+                Помчитесь за 12 минут над знаковыми зданиями- символами ОАЭ!
+                Взлетите над знаменитым курортом Пальмового острова "Атлантис", который гордо высится над водами залива. Прекрасный вид на Palm Jumeirah сменится панорамой города и видом на отель-парус Burj Al Arab. Затем вы направитесь в район Даунтаун, где увидите самое большое здание в мире- башню Бурдж Аль Араб.
+            </li>
+            <li class="feature__time-item">
+                <span class="feature__time-name">15 минут</span>
+                Увидеть всё самое важное за 15 минут вертолётной прогулки? Легко! Взмойте в воздух над фешенебельным курортом и насладитесь видами мегаполиса. Самые главные достопримечательности, которые стали символом эмирата откроются вашему взору.
+            </li>
+            <li class="feature__time-item">
+                <span class="feature__time-name">25 минут</span>
+                Для тех, кто хочет увидеть весь город, 25 минутная вертолётная прогулка над Дубаем- то, что надо! Вы пролетите над современной и исторической частью мегаполиса и познакомитесь с урбаном с высоты! Взгляните на Дубай с нового ракурса!
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="questions">
+    <div class="container">
+        <h2 class="title questions__title">Часто задаваемые вопросы</h2>
+        <ul class="questions__inner">
+            <li class="questions__item" style="margin-left: 13px;">
+                <button class="questions__btn questions__btn--active" type="button" style="margin-left: -13px;">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text" style="max-height: 177px;">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+            <li class="questions__item">
+                <button class="questions__btn" type="button">
+                    Где мы встречаемся?
+                    <svg class="questions__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </button>
+                <div class="questions__text">
+                    <p>
+                        Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. 
+                    </p>
+                    <p>
+                        Многие известные личности заблокированы в рамках своих собственных рациональных ограничений!
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="contact">
+    <div class="container">
+        <h2 class="title contact__title">Остались вопросы?</h2>
+        <div class="contact__inner">
+            <div class="contact__content">
+                <div class="contact__text">
+                    <p>
+                        Оставьте заявку и мы проконсультируем вас и ответим на все вопросы
+                    </p>
+                    <p>
+                        Вы так же можете связаться с нами удобным для вас способом
+                    </p>
+                </div>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#contact-phone"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#post"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="contact__form" action="#">
+                <label class="visually-hidden" for="name">Поле для ввода Вашего имя</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Имя">
+                <label class="visually-hidden" for="tel">Поле для ввода Вашего телефона</label>
+                <input class="input" type="tel" i
+                d="tel" name="tel" placeholder="Телефон">
+                <label class="visually-hidden">Поле для ввода Вашего отзыва</label>
+                <textarea class="input textarea" name="text" placeholder="Отзыв"></textarea>
+                <button class="btn contact__btn" type="submit">Отправить</button>
+                <label class="popup__label">
+                    <input class="checkbox" type="checkbox" name="check">
+                    <span class="contact__check"></span>
+                    <p class="contact__text-contact">Я согласен на обработку персональных данных</p>
+                </label>
+
+            </form>
+        </div>
+    </div>
+</section>
+    </main>    
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__top">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__images" src="images/logo.svg" alt="Логотип">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">Главная</a>
+                            </li>
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">Экскурсии</a>
+                            </li>
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">Контакты</a>
+                            </li>
+                            <li class="menu__item menu__item--fotter">
+                                <a class="menu__link menu__link--footer" href="#">О нас</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__text">
+                    <p>
+                        Приятно, граждане, наблюдать, как сторонники тоталитаризма в науке, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали.
+                    </p>
+                </div>
+            </div>
+            <div class="footer__right">
+                <ul class="social footer__social">
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#contact-phone"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--footer" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="images/sprite.svg#post"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <a class="footer__tel" href="tel:+79999999999">
+                    +7 999 999 99 99
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copy">
+        <div class="container">
+            <div class="footer__copy-inner">
+                <a class="footer__link footer__link--politic" href="#">
+                    Политика конфиденциальности
+                </a>
+                <a class="footer__link footer__link--conditions" href="#">
+                    Условия использования
+                </a>
+                <a class="footer__link footer__link--email" href="mailto:tngroup@2021">
+                    tngroup@2021
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/tour.js"></script>
+</body>
+</html>

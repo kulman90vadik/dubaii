@@ -1,0 +1,77 @@
+.footer {
+    background-color: #71c168;
+    &__logo {
+        margin-right: 85px;
+        width: 134px;
+        height: 54px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 46px 0 40px;
+    }
+    &__left {
+        max-width: 855px;
+        width: 100%;
+        margin-right: 25px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+    &__text {
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 4;
+        }
+    }
+    &__social {
+        margin-bottom: 24px;
+    }
+    &__tel {
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+        outline: transparent;
+        &:hover {
+            color: $gold-lite;
+        }
+        &:active {
+            color: $green;
+        }
+        &:focus {
+            color: $grey;
+        }
+    }
+    &__copy {
+        background-color: #185331;
+        padding: 10px 0;
+    }
+    &__copy-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        font-size: 16px;
+        color: #fff;
+        outline: transparent;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $gold-lite;
+        }
+        &:active {
+            color: $green;
+        }
+        &:focus {
+            color: $grey;
+        }
+        &--conditions {
+            margin-right: auto;
+        }
+        &--politic {
+            margin-right: 60px;
+        }
+    }
+}

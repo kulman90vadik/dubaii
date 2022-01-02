@@ -5,13 +5,13 @@
             <aside class="sidebar">
                 
                 <div class="sidebar__filter">
-                    <button class="sidebar__button" type="button">
+                    <button class="sidebar__button sidebar__button--active" type="button">
                         <span class="sidebar__text">Эмират</span>
                         <svg class="sidebar__icon">
                             <use xlink:href="images/sprite.svg#arrow-down"></use>
                         </svg>                            
                     </button>
-                    <ul class="sidebar__list">
+                    <ul class="sidebar__list" style="max-height: 224px;">
                         <li class="sidebar__item">
                             <label class="sidebar__label">
                                 <input class="sidebar__input" name="city" type="checkbox">
@@ -166,7 +166,399 @@
                         </div>
                     </article>
                 </li>
-           
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-2.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Пт-Сб</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst">Свидание</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Ужин на арабской лодке</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new catalogs-card__price-new--red">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Свидание</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-3.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Сб-Вс</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--purple">Семейный</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Полёт на воздушном шаре</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-4.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Пт-Сб</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>15-25</span>мин</div>
+                                <div class="catalogs-card__person">2-6</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Полёт на вертолёте</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new catalogs-card__price-new--red">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-5.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                            <!-- <span class="catalogs-card__tabs catalogs-card__tabs--sale"></span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst"></span> -->
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">3-5</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Тематический парк MotionGate</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">120</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-6.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">3-5</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Тематический парк MotionGate</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">125</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Ежедневно</span>
+                            <!-- <span class="catalogs-card__tabs catalogs-card__tabs--sale"></span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst"></span> -->
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-2.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Пт-Сб</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--tryst">Свидание</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Ужин на арабской лодке</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new catalogs-card__price-new--red">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-1.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Свидание</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--sale">Акция</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Пустынное сафари</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                <div class="catalogs-card__price-new">
+                                    от
+                                    <div class="catalogs-card__price-number">150</div>
+                                    <span>$</span>
+                                </div>
+                                <div class="catalogs-card__price-old">
+                                    250
+                                    <span>$</span>
+                                </div>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalogs__items">
+                    <article class="catalogs-card">
+                        <div class="catalogs-card__photo">
+                            <img class="catalogs-card__image" src="images/catalogs-card-3.jpg" alt="Пустынное сафари">
+                            <span class="catalogs-card__tabs catalogs-card__tabs--day">Сб-Вс</span>
+                            <span class="catalogs-card__tabs catalogs-card__tabs--purple">Семейный</span>
+                        </div>
+                        <div class="catalogs-card__info">
+                            <div class="catalogs-card__time">
+                                <div class="catalogs-card__hour"><span>3</span>ч</div>
+                                <div class="catalogs-card__person">2-3</div>
+                            </div>
+                            <h3 class="catalogs-card__name">Полёт на воздушном шаре</h3>
+                            <div class="catalogs-card__text">
+                                <p>
+                                    Катание на джипах по песчаным барханам, ужин барбекю, шоу – танура, танец живота, краткое катание на верблюдах<span class="catalogs-card__text--dots">...</span><span class="catalogs-card__text--more">шоу – танура, танец живота, краткое катание на верблюдах, шоу – танура, танец живота, краткое катание на верблюдах.</span>
+                                </p>
+                                <button class="catalogs-card__add" type="button">
+                                    <span>Развернуть</span>
+                                    <svg class="catalogs-card__icon">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="catalogs-card__price">
+                                от
+                                <div class="catalogs-card__price-number">150</div>
+                                <span>$</span>
+                            </div>
+                            <div class="catalogs-card__bottom">
+                                <button class="catalogs-card__btn btn" type="button">Подробнее</button>
+                                <a class="catalogs-card__link" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
             </ul>
         </div>
     </div>

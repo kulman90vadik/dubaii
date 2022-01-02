@@ -125,11 +125,14 @@
 }
 
 .logo {
-    display: block;
+    display: flex;
     outline: transparent;
+    width: 85px;
+    height: 40px;
     &__images {
-        width: 85px;
-        height: 40px;
+        object-fit: fill;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -143,6 +146,12 @@
     &__item {
         &:not(:last-child) {
             margin-right: 24px;
+        }
+    }
+    &__item--footer {
+        font-size: 20px;
+        &:not(:last-child) {
+            margin-right: 12px;
         }
     }
     &__link {
@@ -174,6 +183,14 @@
         }
         &:active::after {
             background-color: #6e6e6e;
+        }
+    }
+    &__link--footer {
+        &::after {
+            display: none;
+        }
+        &:hover {
+            color: #ccc;
         }
     }
 }

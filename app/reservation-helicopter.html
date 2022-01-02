@@ -1,0 +1,81 @@
+<section class="reservation-helicopter">
+    <div class="container">
+        <h2 class="title reservation-helicopter__title">Быстрое бронирование</h2>
+        <form class="reservation-helicopter__form" action="#">
+            <ul class="reservation-helicopter__list">
+                <li class="reservation-helicopter__item">
+                    <label class="reservation-helicopter__label" for="date">Выберите дату</label>
+                    <div class="reservation-helicopter__holder">
+                        <input  class="reservation-helicopter__input reservation-helicopter__input--calendar" value="2021-12-12" type="date" name="date" id="date">
+                    </div>
+                </li>
+                <li class="reservation-helicopter__item">
+                    <label class="reservation-helicopter__label" for="time">Время</label>
+                    <div class="reservation-helicopter__holder">
+                        <input  class="reservation-helicopter__input reservation-helicopter__input--time" value="18:00" type="time" name="time" id="time">
+                    </div>
+                </li>
+    
+                <li class="reservation-helicopter__item">
+                    <div class="reservation-helicopter__label" for="time">Вид</div>
+                    <div class="reservation-helicopter__holder">
+                        <button class="reservation-helicopter__btn reservation-helicopter__btn--number" type="button" value="Группа">
+                            <div class="reservation-helicopter__text">Группа</div>
+                            <svg class="reservation-helicopter__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                        
+                        <button class="reservation-helicopter__btn reservation-helicopter__btn--mann reservation-helicopter__btn--bottom" type="button" value="1 человек">
+                            <div class="reservation-helicopter__text">1 человек</div>
+                            <svg class="reservation-helicopter__icon">
+                                <use xlink:href="images/sprite.svg#users"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="reservation-helicopter__item">
+                    <div class="reservation-helicopter__label">Длительность полета</div>
+                    <div class="reservation-helicopter__time-holder">
+
+                        <button class="reservation-helicopter__time-btn" type="button" value="15 минут">
+                            <span class="reservation-helicopter__time-value">15 минут</span>
+                            <svg class="reservation-helicopter__time-icon">
+                                <use xlink:href="images/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="reservation-helicopter__time-list">
+                            <li class="reservation-helicopter__time-item">15 минут</li>
+                            <li class="reservation-helicopter__time-item">20 минут</li>
+                            <li class="reservation-helicopter__time-item">25 минут</li>
+                            <li class="reservation-helicopter__time-item">30 минут</li>
+                            <li class="reservation-helicopter__time-item">45 минут</li>
+                        </ul>
+                    </div>
+                </li> 
+
+                <li class="reservation-helicopter__item">
+                    <div class="reservation-helicopter__label">Кол-во персон</div>
+                    <div class="reservation-helicopter__box">
+                        <div class="reservation-helicopter__counter">
+                            <button class="reservation-helicopter__plus" type="button" data-action ="plus">+</button>
+                            <div class="reservation-helicopter__number">1</div>
+                            <button class="reservation-helicopter__minus" type="button" data-action ="minus">-</button>
+                        </div>
+                        <div class="reservation-helicopter__price">
+                            333
+                            <span>$</span>
+                        </div>
+                    </div>
+                </li>    
+                
+                <li class="reservation-helicopter__item reservation-helicopter__item--submit">
+                    <button class="btn reservation-helicopter__submit" type="submit">Забронировать экскурсию</button>
+                </li>
+
+            </ul>
+        </form>
+    </div>
+</section>
+
